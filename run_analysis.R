@@ -52,7 +52,8 @@ all_data <- cbind(x_data, y_data, subject_data)
 
 
 ###Part-5
-###From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+###From the data set in step 4, creates a second, independent tidy data set with 
+###    the average of each variable for each activity and each subject.
 ###=======================================================================================
 # 66 <- 68 columns but last two (activity & subject) 
 averages_data <- ddply(all_data, .(subject, activity), function(x) colMeans(x[, 1:66])) 
